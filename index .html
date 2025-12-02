@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>申沃进出口 source-offer（国际贸易代理）- 义乌采购 | 库存尾货 | 进出口代理 | 货运代理</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0A2463;
+            --secondary-color: #D4AF37;
+            --light-color: #FFFFFF;
+            --dark-color: #333333;
+            --accent-color: #3E92CC;
+        }
+        
+        body {
+            font-family: 'Noto Sans SC', 'Noto Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .rtl {
+            direction: rtl;
+            text-align: right;
+        }
+        
+        .lang-ru, .lang-uk {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(10, 36, 99, 0.8), rgba(10, 36, 99, 0.9)), url('https://p26-doubao-search-sign.byteimg.com/tos-cn-i-be4g95zd3a/903291906562064444~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1779891111&x-signature=Wh6gG4vRGTKTtokc4GGjJVpoPsM%3D') no-repeat center center;
+            background-size: cover;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .service-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+            color: var(--secondary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0d2d7a;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #c4a028;
+            transform: translateY(-2px);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .active-nav::after {
+            width: 100%;
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .product-image {
+            transition: all 0.5s ease;
+        }
+        
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+        
+        .ai-chat-container {
+            transition: all 0.3s ease;
+        }
+        
+        .ai-chat-container.expanded {
+            height: 400px;
+        }
+        
+        .chat-message {
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* 加载动画 */
+        .loader {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid var(--secondary-color);
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* 滚动动画 */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .mobile-menu {
+                transition: all 0.3s ease;
+            }
+            
+            .mobile-menu.hidden {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- 顶部语言选择栏 -->
+    <div class="bg-gray-100 py-2">
+        <div class="container mx-auto px-4 flex justify-end items-center">
+            <div class="flex space-x-4">
+                <button class="lang-btn text-sm font-medium hover:text-blue-800 transition-colors" data-lang="zh">中文</button>
+                <button class="lang-btn text-sm font-medium hover:text-blue-800 transition-colors" data-lang="en">English</button>
+                <button class="lang-btn text-sm font-medium hover:text-blue-800 transition-colors" data-lang="ru">Русский</button>
+                <button class="lang-btn text-sm font-medium hover:text-blue-800 transition-colors" data-lang="uk">Українська</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-blue-900">
+                        <span class="text-yellow-600">申沃</span>进出口 <span class="text-white bg-blue-900 px-1 rounded">source-offer</span>（国际贸易代理）
+                    </a>
+                </div>
+                
+                <!-- 桌面导航 -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link active-nav text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-home">首页</a>
+                    <a href="#services" class="nav-link text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-services">业务服务</a>
+                    <a href="#products" class="nav-link text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-products">库存尾货</a>
+                    <a href="#about" class="nav-link text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-about">关于我们</a>
+                    <a href="#contact" class="nav-link text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-contact">联系我们</a>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-800 hover:text-blue-900 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 移动端导航菜单 -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <a href="#home" class="block py-2 text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-home">首页</a>
+                <a href="#services" class="block py-2 text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-services">业务服务</a>
+                <a href="#products" class="block py-2 text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-products">库存尾货</a>
+                <a href="#about" class="block py-2 text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-about">关于我们</a>
+                <a href="#contact" class="block py-2 text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-contact">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section id="home" class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 fade-in" data-lang-key="hero-title">
+                    专业国际贸易代理服务
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90 fade-in" data-lang-key="hero-subtitle">
+                    连接中国制造商与全球采购商，提供一站式贸易解决方案
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-4 fade-in">
+                    <a href="#services" class="btn-primary px-8 py-3 rounded-lg font-medium text-lg">
+                        <span data-lang-key="hero-btn-services">了解我们的服务</span>
+                    </a>
+                    <a href="#contact" class="btn-secondary px-8 py-3 rounded-lg font-medium text-lg">
+                        <span data-lang-key="hero-btn-contact">立即咨询</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 业务服务 -->
+    <section id="services" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 fade-in" data-lang-key="services-title">我们的业务服务</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in" data-lang-key="services-subtitle">
+                    提供全方位的国际贸易代理服务，助力您的业务全球化
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 服务卡片 1 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 fade-in">
+                    <div class="service-icon text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" data-lang-key="service-1-title">库存尾货信息收集</h3>
+                    <p class="text-gray-600 mb-4" data-lang-key="service-1-desc">
+                        收集各类商品库存尾货信息，为采购商提供质优价廉的货源选择
+                    </p>
+                    <a href="#products" class="text-blue-900 hover:text-blue-700 font-medium flex items-center" data-lang-key="service-learn-more">
+                        了解更多 <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- 服务卡片 2 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 fade-in">
+                    <div class="service-icon text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" data-lang-key="service-2-title">义乌代理采购</h3>
+                    <p class="text-gray-600 mb-4" data-lang-key="service-2-desc">
+                        专业义乌市场采购代理，为您筛选优质供应商，确保商品质量与交期
+                    </p>
+                    <a href="#contact" class="text-blue-900 hover:text-blue-700 font-medium flex items-center" data-lang-key="service-learn-more">
+                        了解更多 <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- 服务卡片 3 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 fade-in">
+                    <div class="service-icon text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" data-lang-key="service-3-title">进出口代理</h3>
+                    <p class="text-gray-600 mb-4" data-lang-key="service-3-desc">
+                        提供专业的进出口代理服务，包括单证制作、报关报检、信用证操作等
+                    </p>
+                    <a href="#contact" class="text-blue-900 hover:text-blue-700 font-medium flex items-center" data-lang-key="service-learn-more">
+                        了解更多 <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- 服务卡片 4 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 fade-in">
+                    <div class="service-icon text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" data-lang-key="service-4-title">货运代理</h3>
+                    <p class="text-gray-600 mb-4" data-lang-key="service-4-desc">
+                        提供国际海运、空运、陆运代理服务，为您选择最优物流方案
+                    </p>
+                    <a href="#contact" class="text-blue-900 hover:text-blue-700 font-medium flex items-center" data-lang-key="service-learn-more">
+                        了解更多 <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- 库存尾货信息 -->
+    <section id="products" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 fade-in" data-lang-key="products-title">库存尾货信息</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in" data-lang-key="products-subtitle">
+                    我们收集了大量优质库存尾货信息，为您提供极具竞争力的价格
+                </p>
+            </div>
+            
+            <!-- 搜索和筛选 -->
+            <div class="mb-10 fade-in">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <div class="flex-grow">
+                        <div class="relative">
+                            <input type="text" id="product-search" placeholder="搜索产品..." 
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                            <button class="absolute right-3 top-3 text-gray-500 hover:text-blue-900">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <select id="category-filter" class="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                            <option value="all" data-lang-key="filter-all">所有类别</option>
+                            <option value="clothing" data-lang-key="filter-clothing">服装纺织</option>
+                            <option value="electronics" data-lang-key="filter-electronics">电子产品</option>
+                            <option value="home" data-lang-key="filter-home">家居用品</option>
+                            <option value="toys" data-lang-key="filter-toys">玩具礼品</option>
+                        </select>
+                        <button id="filter-btn" class="btn-primary px-4 py-3 rounded-lg">
+                            <i class="fas fa-filter mr-2"></i> <span data-lang-key="filter-btn">筛选</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 产品列表 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="product-list">
+                <!-- 产品卡片 1 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden fade-in" data-category="clothing">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://p11-doubao-search-sign.byteimg.com/tos-cn-i-be4g95zd3a/931566208849674276~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1779891111&x-signature=QhBJWKPKPDpbtyECvrZ%2F3uWIS3A%3D" 
+                             alt="女士服装尾货" 
+                             class="product-image w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded">
+                            热销
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2" data-lang-key="product-1-title">女士时尚服装尾货</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang-key="product-1-desc">
+                            品牌女士服装尾货，包括连衣裙、外套、裤子等，质量优良，价格优惠
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-900 font-bold">¥15-35 / 件</span>
+                            <span class="text-gray-500 text-sm" data-lang-key="product-stock">库存: 5000件</span>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 bg-gray-50 border-t border-gray-100">
+                        <button class="inquiry-btn w-full py-2 bg-blue-900 text-white rounded hover:bg-blue-800 transition-colors" data-product="product-1">
+                            <span data-lang-key="product-inquiry">询价</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 产品卡片 2 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden fade-in" data-category="electronics">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/labis/image/df68d6d9f39540221fb6bd9c8a8042c1~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1779891111&x-signature=sGgT7F124fi6UbUWSprPnOOCi%2BA%3D" 
+                             alt="电子产品库存" 
+                             class="product-image w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2" data-lang-key="product-2-title">电子产品库存尾货</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang-key="product-2-desc">
+                            各类电子产品库存，包括手机配件、充电器、耳机等，全新原包装
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-900 font-bold">¥5-25 / 件</span>
+                            <span class="text-gray-500 text-sm" data-lang-key="product-stock">库存: 10000件</span>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 bg-gray-50 border-t border-gray-100">
+                        <button class="inquiry-btn w-full py-2 bg-blue-900 text-white rounded hover:bg-blue-800 transition-colors" data-product="product-2">
+                            <span data-lang-key="product-inquiry">询价</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 产品卡片 3 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden fade-in" data-category="home">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/labis/image/cbe3c715e8718d8938918555b7d5b858~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1779891111&x-signature=BTC8cb%2FToMLZvm44AhH%2Fs%2FEOIyc%3D" 
+                             alt="家居用品尾货" 
+                             class="product-image w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                            特价
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2" data-lang-key="product-3-title">家居用品尾货</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang-key="product-3-desc">
+                            厨房用品、清洁用品、家纺等家居产品尾货，质量好，价格低
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-900 font-bold">¥3-15 / 件</span>
+                            <span class="text-gray-500 text-sm" data-lang-key="product-stock">库存: 8000件</span>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 bg-gray-50 border-t border-gray-100">
+                        <button class="inquiry-btn w-full py-2 bg-blue-900 text-white rounded hover:bg-blue-800 transition-colors" data-product="product-3">
+                            <span data-lang-key="product-inquiry">询价</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 产品卡片 4 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden fade-in" data-category="toys">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://p11-doubao-search-sign.byteimg.com/tos-cn-i-xv4ileqgde/ff983d854e474229812e539d17670d1e~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1779891111&x-signature=jVLs1%2BcheeSstOjTorQfBmndEeE%3D" 
+                             alt="玩具礼品尾货" 
+                             class="product-image w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2" data-lang-key="product-4-title">玩具礼品尾货</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang-key="product-4-desc">
+                            各类玩具、礼品、装饰品尾货，适合节日促销和礼品市场
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-900 font-bold">¥2-10 / 件</span>
+                            <span class="text-gray-500 text-sm" data-lang-key="product-stock">库存: 12000件</span>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 bg-gray-50 border-t border-gray-100">
+                        <button class="inquiry-btn w-full py-2 bg-blue-900 text-white rounded hover:bg-blue-800 transition-colors" data-product="product-4">
+                            <span data-lang-key="product-inquiry">询价</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 加载更多按钮 -->
+            <div class="text-center mt-12">
+                <button id="load-more" class="btn-primary px-8 py-3 rounded-lg font-medium">
+                    <span data-lang-key="load-more">加载更多</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 fade-in" data-lang-key="about-title">关于我们</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in" data-lang-key="about-subtitle">
+                    专业的国际贸易代理服务提供商，致力于连接中国制造商与全球采购商
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <img src="https://p3-doubao-search-sign.byteimg.com/tos-cn-i-be4g95zd3a/1132009867247484955~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1779891111&x-signature=p3HYn%2FQxjnDML%2FeUx%2BKPdVjlQJ8%3D" 
+                         alt="义乌小商品市场" 
+                         class="rounded-lg shadow-xl w-full">
+                </div>
+                
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4" data-lang-key="about-company">公司简介</h3>
+                    <p class="text-gray-700 mb-6" data-lang-key="about-intro">
+                        我们是一家专业的国际贸易代理服务公司，专注于为乌克兰、俄罗斯及独联体国家的客户提供高质量的采购代理、库存尾货信息收集、进出口代理和货运代理服务。
+                    </p>
+                    <p class="text-gray-700 mb-6" data-lang-key="about-experience">
+                        凭借多年的行业经验和专业知识，我们已与众多中国制造商和供应商建立了稳定的合作关系，能够为客户提供具有竞争力的价格和优质的产品。
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <div class="text-blue-900 text-3xl mr-4">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900" data-lang-key="about-quality">优质产品</h4>
+                                <p class="text-gray-600 text-sm" data-lang-key="about-quality-desc">严格质量控制</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="text-blue-900 text-3xl mr-4">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900" data-lang-key="about-price">优惠价格</h4>
+                                <p class="text-gray-600 text-sm" data-lang-key="about-price-desc">极具竞争力的价格</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="text-blue-900 text-3xl mr-4">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900" data-lang-key="about-delivery">快捷交付</h4>
+                                <p class="text-gray-600 text-sm" data-lang-key="about-delivery-desc">高效物流服务</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="text-blue-900 text-3xl mr-4">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900" data-lang-key="about-service">专业服务</h4>
+                                <p class="text-gray-600 text-sm" data-lang-key="about-service-desc">多语言客户支持</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn-primary inline-block px-6 py-3 rounded-lg font-medium">
+                        <span data-lang-key="about-contact">联系我们</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 服务区域 -->
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center fade-in" data-lang-key="about-regions">我们的服务区域</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 fade-in">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <div class="text-blue-900 text-4xl mb-4">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="region-ukraine">乌克兰</h4>
+                        <p class="text-gray-600" data-lang-key="region-ukraine-desc">
+                            基辅、敖德萨、哈尔科夫等主要城市
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <div class="text-blue-900 text-4xl mb-4">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="region-russia">俄罗斯</h4>
+                        <p class="text-gray-600" data-lang-key="region-russia-desc">
+                            莫斯科、圣彼得堡、叶卡捷琳堡等主要城市
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <div class="text-blue-900 text-4xl mb-4">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="region-cis">独联体国家</h4>
+                        <p class="text-gray-600" data-lang-key="region-cis-desc">
+                            哈萨克斯坦、白俄罗斯、乌兹别克斯坦等国家
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 fade-in" data-lang-key="contact-title">联系我们</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in" data-lang-key="contact-subtitle">
+                    无论您有任何问题或需求，我们都将竭诚为您服务
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- 联系表单 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 fade-in">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6" data-lang-key="contact-form-title">发送咨询</h3>
+                    
+                    <form id="contact-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2" data-lang-key="form-name">姓名</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent" required>
+                            </div>
+                            
+                            <div>
+                                <label for="company" class="block text-gray-700 font-medium mb-2" data-lang-key="form-company">公司名称</label>
+                                <input type="text" id="company" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent" required>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2" data-lang-key="form-email">电子邮箱</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent" required>
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-2" data-lang-key="form-phone">电话/微信/WhatsApp/Telegram/VK号码</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="country" class="block text-gray-700 font-medium mb-2" data-lang-key="form-country">国家/地区</label>
+                            <select id="country" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent" required>
+                                <option value="" data-lang-key="form-select-country">请选择国家/地区</option>
+                                <option value="ukraine" data-lang-key="form-ukraine">乌克兰</option>
+                                <option value="russia" data-lang-key="form-russia">俄罗斯</option>
+                                <option value="kazakhstan" data-lang-key="form-kazakhstan">哈萨克斯坦</option>
+                                <option value="belarus" data-lang-key="form-belarus">白俄罗斯</option>
+                                <option value="uzbekistan" data-lang-key="form-uzbekistan">乌兹别克斯坦</option>
+                                <option value="other" data-lang-key="form-other">其他</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="service" class="block text-gray-700 font-medium mb-2" data-lang-key="form-service">咨询服务</label>
+                            <select id="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent" required>
+                                <option value="" data-lang-key="form-select-service">请选择服务类型</option>
+                                <option value="stock" data-lang-key="form-stock">库存尾货信息</option>
+                                <option value="procurement" data-lang-key="form-procurement">义乌代理采购</option>
+                                <option value="import-export" data-lang-key="form-import-export">进出口代理</option>
+                                <option value="shipping" data-lang-key="form-shipping">货运代理</option>
+                                <option value="other" data-lang-key="form-other-service">其他</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2" data-lang-key="form-message">咨询内容</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary w-full py-3 rounded-lg font-medium text-lg">
+                            <span data-lang-key="form-submit">提交咨询</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- 联系信息 -->
+                <div class="fade-in">
+                    <div class="bg-blue-900 text-white rounded-xl shadow-lg p-8 mb-8">
+                        <h3 class="text-2xl font-bold mb-6" data-lang-key="contact-info-title">联系方式</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-yellow-400 text-xl mt-1 mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1" data-lang-key="contact-address">地址</h4>
+                                    <p>中国浙江省义乌市国际商贸城</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-yellow-400 text-xl mt-1 mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1" data-lang-key="contact-phone">电话/微信/WhatsApp/Telegram/VK</h4>
+                                    <p>+8615258955759</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-yellow-400 text-xl mt-1 mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1" data-lang-key="contact-email">电子邮箱</h4>
+                                    <p>317848118@qq.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-yellow-400 text-xl mt-1 mr-4">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1" data-lang-key="contact-hours">工作时间</h4>
+                                    <p data-lang-key="contact-hours-detail">周一至周五: 9:00 - 18:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-3" data-lang-key="contact-social">关注我们</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white hover:text-yellow-400 transition-colors">
+                                    <i class="fab fa-weixin text-2xl"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-yellow-400 transition-colors">
+                                    <i class="fab fa-weibo text-2xl"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-yellow-400 transition-colors">
+                                    <i class="fab fa-facebook-f text-2xl"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-yellow-400 transition-colors">
+                                    <i class="fab fa-instagram text-2xl"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-yellow-400 transition-colors">
+                                    <i class="fab fa-linkedin-in text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- AI翻译助手 -->
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-gray-900" data-lang-key="ai-title">AI翻译助手</h3>
+                            <div class="text-blue-900">
+                                <i class="fas fa-robot text-xl"></i>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-4" data-lang-key="ai-desc">
+                            使用我们的AI翻译助手，轻松跨越语言障碍
+                        </p>
+                        
+                        <div class="ai-chat-container bg-gray-50 rounded-lg p-4 h-64 overflow-y-auto mb-4">
+                            <div class="chat-message flex mb-4">
+                                <div class="bg-blue-900 text-white rounded-lg py-2 px-4 max-w-[80%]">
+                                    <p data-lang-key="ai-greeting">您好！我是您的AI翻译助手，可以帮助您翻译中文、英文、俄文和乌克兰文。请问有什么可以帮助您的？</p>
+                                </div>
+                            </div>
+                            <!-- 聊天消息将在这里动态添加 -->
+                        </div>
+                        
+                        <div class="flex">
+                            <select id="translate-from" class="px-3 py-2 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                                <option value="zh" data-lang-key="ai-chinese">中文</option>
+                                <option value="en" data-lang-key="ai-english">英文</option>
+                                <option value="ru" data-lang-key="ai-russian">俄文</option>
+                                <option value="uk" data-lang-key="ai-ukrainian">乌克兰文</option>
+                            </select>
+                            <div class="bg-gray-200 flex items-center px-2">
+                                <i class="fas fa-exchange-alt text-gray-600"></i>
+                            </div>
+                            <select id="translate-to" class="px-3 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                                <option value="en" data-lang-key="ai-english">英文</option>
+                                <option value="zh" data-lang-key="ai-chinese">中文</option>
+                                <option value="ru" data-lang-key="ai-russian">俄文</option>
+                                <option value="uk" data-lang-key="ai-ukrainian">乌克兰文</option>
+                            </select>
+                            <input type="text" id="translate-input" placeholder="输入要翻译的文本..." 
+                                   class="flex-grow px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                            <button id="translate-btn" class="bg-blue-900 text-white px-4 py-2 rounded-r-lg hover:bg-blue-800 transition-colors">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4" data-lang-key="footer-about">关于我们</h3>
+                    <p class="text-gray-400 mb-4" data-lang-key="footer-about-desc">
+                        专业的国际贸易代理服务提供商，致力于连接中国制造商与全球采购商
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-weixin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-weibo"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4" data-lang-key="footer-services">我们的服务</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition-colors" data-lang-key="footer-stock">库存尾货信息收集</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors" data-lang-key="footer-procurement">义乌代理采购</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors" data-lang-key="footer-import-export">进出口代理</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors" data-lang-key="footer-shipping">货运代理</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4" data-lang-key="footer-quick-links">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors" data-lang-key="footer-home">首页</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors" data-lang-key="footer-services-link">业务服务</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition-colors" data-lang-key="footer-products">库存尾货</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors" data-lang-key="footer-about-link">关于我们</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors" data-lang-key="footer-contact">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4" data-lang-key="footer-contact">联系我们</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-yellow-500"></i>
+                            <span class="text-gray-400">中国浙江省义乌市国际商贸城</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-yellow-500"></i>
+                            <span class="text-gray-400">+8615258955759</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-yellow-500"></i>
+                            <span class="text-gray-400">317848118@qq.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fab fa-instagram mt-1 mr-3 text-yellow-500"></i>
+                            <span class="text-gray-400">yiwu7758</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock mt-1 mr-3 text-yellow-500"></i>
+                            <span class="text-gray-400" data-lang-key="footer-hours">周一至周五: 9:00 - 18:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 mt-8 text-center">
+                <p class="text-gray-400" data-lang-key="footer-copyright">
+                    &copy; 2025 全球贸易代理. 保留所有权利.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 询价模态框 -->
+    <div id="inquiry-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg shadow-xl max-w-md w-full mx-4">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-bold text-gray-900" data-lang-key="modal-title">产品询价</h3>
+                    <button id="close-modal" class="text-gray-500 hover:text-gray-700 focus:outline-none">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <form id="inquiry-form">
+                    <input type="hidden" id="inquiry-product" value="">
+                    
+                    <div class="mb-4">
+                        <label for="inquiry-name" class="block text-gray-700 font-medium mb-2" data-lang-key="modal-name">姓名</label>
+                        <input type="text" id="inquiry-name" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent" required>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="inquiry-email" class="block text-gray-700 font-medium mb-2" data-lang-key="modal-email">电子邮箱</label>
+                        <input type="email" id="inquiry-email" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent" required>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="inquiry-phone" class="block text-gray-700 font-medium mb-2" data-lang-key="modal-phone">电话/微信/WhatsApp/Telegram/VK号码</label>
+                        <input type="tel" id="inquiry-phone" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent" required>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="inquiry-quantity" class="block text-gray-700 font-medium mb-2" data-lang-key="modal-quantity">采购数量</label>
+                        <input type="number" id="inquiry-quantity" min="1" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent" required>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="inquiry-message" class="block text-gray-700 font-medium mb-2" data-lang-key="modal-message">留言</label>
+                        <textarea id="inquiry-message" rows="3" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary w-full py-2 rounded-lg font-medium">
+                        <span data-lang-key="modal-submit">提交询价</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 成功提示模态框 -->
+    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg shadow-xl max-w-md w-full mx-4 p-6 text-center">
+            <div class="text-green-500 text-5xl mb-4">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="success-title">提交成功</h3>
+            <p class="text-gray-600 mb-6" data-lang-key="success-message">
+                您的信息已成功提交，我们将尽快与您联系！
+            </p>
+            <button id="close-success" class="btn-primary px-6 py-2 rounded-lg font-medium">
+                <span data-lang-key="success-close">关闭</span>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // 多语言支持
+        const translations = {
+            zh: {
+                'nav-home': '首页',
+                'nav-services': '业务服务',
+                'nav-products': '库存尾货',
+                'nav-about': '关于我们',
+                'nav-contact': '联系我们',
+                'hero-title': '专业国际贸易代理服务',
+                'hero-subtitle': '连接中国制造商与全球采购商，提供一站式贸易解决方案',
+                'hero-btn-services': '了解我们的服务',
+                'hero-btn-contact': '立即咨询',
+                'services-title': '我们的业务服务',
+                'services-subtitle': '提供全方位的国际贸易代理服务，助力您的业务全球化',
+                'service-1-title': '库存尾货信息收集',
+                'service-1-desc': '收集各类商品库存尾货信息，为采购商提供质优价廉的货源选择',
+                'service-2-title': '义乌代理采购',
+                'service-2-desc': '专业义乌市场采购代理，为您筛选优质供应商，确保商品质量与交期',
+                'service-3-title': '进出口代理',
+                'service-3-desc': '提供专业的进出口代理服务，包括单证制作、报关报检、信用证操作等',
+                'service-4-title': '货运代理',
+                'service-4-desc': '提供国际海运、空运、陆运代理服务，为您选择最优物流方案',
+                'service-learn-more': '了解更多',
+                'process-title': '国际贸易业务流程',
+                'products-title': '库存尾货信息',
+                'products-subtitle': '我们收集了大量优质库存尾货信息，为您提供极具竞争力的价格',
+                'filter-all': '所有类别',
+                'filter-clothing': '服装纺织',
+                'filter-electronics': '电子产品',
+                'filter-home': '家居用品',
+                'filter-toys': '玩具礼品',
+                'filter-btn': '筛选',
+                'product-1-title': '女士时尚服装尾货',
+                'product-1-desc': '品牌女士服装尾货，包括连衣裙、外套、裤子等，质量优良，价格优惠',
+                'product-2-title': '电子产品库存尾货',
+                'product-2-desc': '各类电子产品库存，包括手机配件、充电器、耳机等，全新原包装',
+                'product-3-title': '家居用品尾货',
+                'product-3-desc': '厨房用品、清洁用品、家纺等家居产品尾货，质量好，价格低',
+                'product-4-title': '玩具礼品尾货',
+                'product-4-desc': '各类玩具、礼品、装饰品尾货，适合节日促销和礼品市场',
+                'product-stock': '库存: ',
+                'product-inquiry': '询价',
+                'load-more': '加载更多',
+                'about-title': '关于我们',
+                'about-subtitle': '专业的国际贸易代理服务提供商，致力于连接中国制造商与全球采购商',
+                'about-company': '公司简介',
+                'about-intro': '我们是一家专业的国际贸易代理服务公司，专注于为乌克兰、俄罗斯及独联体国家的客户提供高质量的采购代理、库存尾货信息收集、进出口代理和货运代理服务。',
+                'about-experience': '凭借多年的行业经验和专业知识，我们已与众多中国制造商和供应商建立了稳定的合作关系，能够为客户提供具有竞争力的价格和优质的产品。',
+                'about-quality': '优质产品',
+                'about-quality-desc': '严格质量控制',
+                'about-price': '优惠价格',
+                'about-price-desc': '极具竞争力的价格',
+                'about-delivery': '快捷交付',
+                'about-delivery-desc': '高效物流服务',
+                'about-service': '专业服务',
+                'about-service-desc': '多语言客户支持',
+                'about-contact': '联系我们',
+                'about-regions': '我们的服务区域',
+                'region-ukraine': '乌克兰',
+                'region-ukraine-desc': '基辅、敖德萨、哈尔科夫等主要城市',
+                'region-russia': '俄罗斯',
+                'region-russia-desc': '莫斯科、圣彼得堡、叶卡捷琳堡等主要城市',
+                'region-cis': '独联体国家',
+                'region-cis-desc': '哈萨克斯坦、白俄罗斯、乌兹别克斯坦等国家',
+                'contact-title': '联系我们',
+                'contact-subtitle': '无论您有任何问题或需求，我们都将竭诚为您服务',
+                'contact-form-title': '发送咨询',
+                'form-name': '姓名',
+                'form-company': '公司名称',
+                'form-email': '电子邮箱',
+                'form-phone': '电话/微信/WhatsApp/Telegram/VK号码',
+                'form-country': '国家/地区',
+                'form-select-country': '请选择国家/地区',
+                'form-ukraine': '乌克兰',
+                'form-russia': '俄罗斯',
+                'form-kazakhstan': '哈萨克斯坦',
+                'form-belarus': '白俄罗斯',
+                'form-uzbekistan': '乌兹别克斯坦',
+                'form-other': '其他',
+                'form-service': '咨询服务',
+                'form-select-service': '请选择服务类型',
+                'form-stock': '库存尾货信息',
+                'form-procurement': '义乌代理采购',
+                'form-import-export': '进出口代理',
+                'form-shipping': '货运代理',
+                'form-other-service': '其他',
+                'form-message': '咨询内容',
+                'form-submit': '提交咨询',
+                'contact-info-title': '联系方式',
+                'contact-address': '地址',
+                'contact-phone': '电话/微信/WhatsApp/Telegram/VK',
+                'contact-email': '电子邮箱',
+                'contact-hours': '工作时间',
+                'contact-hours-detail': '周一至周五: 9:00 - 18:00',
+                'contact-social': '关注我们',
+                'ai-title': 'AI翻译助手',
+                'ai-desc': '使用我们的AI翻译助手，轻松跨越语言障碍',
+                'ai-greeting': '您好！我是您的AI翻译助手，可以帮助您翻译中文、英文、俄文和乌克兰文。请问有什么可以帮助您的？',
+                'ai-chinese': '中文',
+                'ai-english': '英文',
+                'ai-russian': '俄文',
+                'ai-ukrainian': '乌克兰文',
+                'modal-title': '产品询价',
+                'modal-name': '姓名',
+                'modal-email': '电子邮箱',
+                'modal-phone': '电话/微信/WhatsApp/Telegram/VK号码',
+                'modal-quantity': '采购数量',
+                'modal-message': '留言',
+                'modal-submit': '提交询价',
+                'success-title': '提交成功',
+                'success-message': '您的信息已成功提交，我们将尽快与您联系！',
+                'success-close': '关闭',
+                'footer-about': '关于我们',
+                'footer-about-desc': '专业的国际贸易代理服务提供商，致力于连接中国制造商与全球采购商',
+                'footer-services': '我们的服务',
+                'footer-stock': '库存尾货信息收集',
+                'footer-procurement': '义乌代理采购',
+                'footer-import-export': '进出口代理',
+                'footer-shipping': '货运代理',
+                'footer-quick-links': '快速链接',
+                'footer-home': '首页',
+                'footer-services-link': '业务服务',
+                'footer-products': '库存尾货',
+                'footer-about-link': '关于我们',
+                'footer-contact': '联系我们',
+                'footer-hours': '周一至周五: 9:00 - 18:00',
+                'footer-copyright': '© 2025 全球贸易代理. 保留所有权利.'
+            },
+            en: {
+                'nav-home': 'Home',
+                'nav-services': 'Services',
+                'nav-products': 'Stock Products',
+                'nav-about': 'About Us',
+                'nav-contact': 'Contact Us',
+                'hero-title': 'Professional International Trade Agency Services',
+                'hero-subtitle': 'Connecting Chinese manufacturers with global buyers, providing one-stop trade solutions',
+                'hero-btn-services': 'Learn About Our Services',
+                'hero-btn-contact': 'Contact Us Now',
+                'services-title': 'Our Business Services',
+                'services-subtitle': 'Providing comprehensive international trade agency services to help globalize your business',
+                'service-1-title': 'Stock Inventory Information Collection',
+                'service-1-desc': 'Collecting various commodity stock inventory information, providing buyers with quality and affordable supply options',
+                'service-2-title': 'Yiwu Procurement Agency',
+                'service-2-desc': 'Professional Yiwu market procurement agency, screening quality suppliers for you, ensuring product quality and delivery time',
+                'service-3-title': 'Import & Export Agency',
+                'service-3-desc': 'Providing professional import and export agency services, including document preparation, customs declaration, letter of credit operations, etc.',
+                'service-4-title': 'Freight Forwarding',
+                'service-4-desc': 'Providing international sea, air, and land freight forwarding services, selecting the optimal logistics solution for you',
+                'service-learn-more': 'Learn More',
+                'process-title': 'International Trade Business Process',
+                'products-title': 'Stock Inventory Information',
+                'products-subtitle': 'We have collected a large amount of quality stock inventory information, providing you with competitive prices',
+                'filter-all': 'All Categories',
+                'filter-clothing': 'Clothing & Textiles',
+                'filter-electronics': 'Electronics',
+                'filter-home': 'Home Products',
+                'filter-toys': 'Toys & Gifts',
+                'filter-btn': 'Filter',
+                'product-1-title': 'Women\'s Fashion Clothing Stock',
+                'product-1-desc': 'Brand women\'s clothing stock, including dresses, coats, pants, etc., good quality, preferential prices',
+                'product-2-title': 'Electronics Stock Inventory',
+                'product-2-desc': 'Various electronic products inventory, including mobile phone accessories, chargers, earphones, etc., brand new with original packaging',
+                'product-3-title': 'Home Products Stock',
+                'product-3-desc': 'Kitchen supplies, cleaning products, home textiles and other household products stock, good quality, low price',
+                'product-4-title': 'Toys & Gifts Stock',
+                'product-4-desc': 'Various toys, gifts, decorations stock, suitable for holiday promotions and gift markets',
+                'product-stock': 'Stock: ',
+                'product-inquiry': 'Inquiry',
+                'load-more': 'Load More',
+                'about-title': 'About Us',
+                'about-subtitle': 'Professional international trade agency service provider, dedicated to connecting Chinese manufacturers with global buyers',
+                'about-company': 'Company Profile',
+                'about-intro': 'We are a professional international trade agency service company, focusing on providing high-quality procurement agency, stock inventory information collection, import and export agency and freight forwarding services for customers in Ukraine, Russia and CIS countries.',
+                'about-experience': 'With many years of industry experience and professional knowledge, we have established stable cooperative relationships with many Chinese manufacturers and suppliers, able to provide customers with competitive prices and quality products.',
+                'about-quality': 'Quality Products',
+                'about-quality-desc': 'Strict quality control',
+                'about-price': 'Competitive Prices',
+                'about-price-desc': 'Highly competitive prices',
+                'about-delivery': 'Fast Delivery',
+                'about-delivery-desc': 'Efficient logistics services',
+                'about-service': 'Professional Service',
+                'about-service-desc': 'Multilingual customer support',
+                'about-contact': 'Contact Us',
+                'about-regions': 'Our Service Areas',
+                'region-ukraine': 'Ukraine',
+                'region-ukraine-desc': 'Kyiv, Odesa, Kharkiv and other major cities',
+                'region-russia': 'Russia',
+                'region-russia-desc': 'Moscow, St. Petersburg, Yekaterinburg and other major cities',
+                'region-cis': 'CIS Countries',
+                'region-cis-desc': 'Kazakhstan, Belarus, Uzbekistan and other countries',
+                'contact-title': 'Contact Us',
+                'contact-subtitle': 'No matter what questions or needs you have, we will be happy to serve you',
+                'contact-form-title': 'Send Inquiry',
+                'form-name': 'Name',
+                'form-company': 'Company Name',
+                'form-email': 'Email',
+                'form-phone': 'Phone Number',
+                'form-country': 'Country/Region',
+                'form-select-country': 'Please select country/region',
+                'form-ukraine': 'Ukraine',
+                'form-russia': 'Russia',
+                'form-kazakhstan': 'Kazakhstan',
+                'form-belarus': 'Belarus',
+                'form-uzbekistan': 'Uzbekistan',
+                'form-other': 'Other',
+                'form-service': 'Inquiry Service',
+                'form-select-service': 'Please select service type',
+                'form-stock': 'Stock Inventory Information',
+                'form-procurement': 'Yiwu Procurement Agency',
+                'form-import-export': 'Import & Export Agency',
+                'form-shipping': 'Freight Forwarding',
+                'form-other-service': 'Other',
+                'form-message': 'Inquiry Content',
+                'form-submit': 'Submit Inquiry',
+                'contact-info-title': 'Contact Information',
+                'contact-address': 'Address',
+                'contact-phone': 'Phone',
+                'contact-email': 'Email',
+                'contact-hours': 'Working Hours',
+                'contact-hours-detail': 'Monday to Friday: 9:00 - 18:00',
+                'contact-social': 'Follow Us',
+                'ai-title': 'AI Translation Assistant',
+                'ai-desc': 'Use our AI translation assistant to easily overcome language barriers',
+                'ai-greeting': 'Hello! I am your AI translation assistant, can help you translate between Chinese, English, Russian and Ukrainian. How can I help you?',
+                'ai-chinese': 'Chinese',
+                'ai-english': 'English',
+                'ai-russian': 'Russian',
+                'ai-ukrainian': 'Ukrainian',
+                'modal-title': 'Product Inquiry',
+                'modal-name': 'Name',
+                'modal-email': 'Email',
+                'modal-phone': 'Phone Number',
+                'modal-quantity': 'Purchase Quantity',
+                'modal-message': 'Message',
+                'modal-submit': 'Submit Inquiry',
+                'success-title': 'Submission Successful',
+                'success-message': 'Your information has been successfully submitted, we will contact you as soon as possible!',
+                'success-close': 'Close',
+                'footer-about': 'About Us',
+                'footer-about-desc': 'Professional international trade agency service provider, dedicated to connecting Chinese manufacturers with global buyers',
+                'footer-services': 'Our Services',
+                'footer-stock': 'Stock Inventory Information Collection',
+                'footer-procurement': 'Yiwu Procurement Agency',
+                'footer-import-export': 'Import & Export Agency',
+                'footer-shipping': 'Freight Forwarding',
+                'footer-quick-links': 'Quick Links',
+                'footer-home': 'Home',
+                'footer-services-link': 'Services',
+                'footer-products': 'Stock Products',
+                'footer-about-link': 'About Us',
+                'footer-contact': 'Contact Us',
+                'footer-hours': 'Monday to Friday: 9:00 - 18:00',
+                'footer-copyright': '© 2025 申沃进出口（国际贸易代理）. 保留所有权利.'
+            },
+            ru: {
+                'nav-home': 'Главная',
+                'nav-services': 'Услуги',
+                'nav-products': 'Остатки товаров',
+                'nav-about': 'О нас',
+                'nav-contact': 'Связаться с нами',
+                'hero-title': 'Профессиональные услуги международного торгового агента',
+                'hero-subtitle': 'Соединяем китайских производителей с мировыми покупателями, предоставляя комплексные торговые решения',
+                'hero-btn-services': 'Узнайте о наших услугах',
+                'hero-btn-contact': 'Свяжитесь с нами сейчас',
+                'services-title': 'Наши бизнес-услуги',
+                'services-subtitle': 'Предоставляем комплексные услуги международного торгового агента для глобализации вашего бизнеса',
+                'service-1-title': 'Сбор информации об остатках товаров',
+                'service-1-desc': 'Собираем информацию об остатках различных товаров, предоставляя покупателям качественные и доступные предложения',
+                'service-2-title': 'Агентство по закупкам в Ивую',
+                'service-2-desc': 'Профессиональное агентство по закупкам на рынке Ивую, отбираем качественных поставщиков для вас, гарантируем качество продукции и сроки поставки',
+                'service-3-title': 'Импортно-экспортное агентство',
+                'service-3-desc': 'Предоставляем профессиональные услуги импорта и экспорта, включая подготовку документов, таможенную очистку, операции с письмами кредитования и т.д.',
+                'service-4-title': 'Транспортное агентство',
+                'service-4-desc': 'Предоставляем услуги международного морского, воздушного и наземного транспорта, выбираем оптимальное логистическое решение для вас',
+                'service-learn-more': 'Узнать больше',
+                'process-title': 'Процесс международной торговли',
+                'products-title': 'Информация об остатках товаров',
+                'products-subtitle': 'Мы собрали большое количество качественной информации об остатках товаров, предоставляя вам конкурентоспособные цены',
+                'filter-all': 'Все категории',
+                'filter-clothing': 'Одежда и текстиль',
+                'filter-electronics': 'Электроника',
+                'filter-home': 'Домашние товары',
+                'filter-toys': 'Игрушки и подарки',
+                'filter-btn': 'Фильтр',
+                'product-1-title': 'Остатки женской модной одежды',
+                'product-1-desc': 'Остатки брендовой женской одежды, включая платья, пальто, брюки и т.д., хорошее качество, выгодные цены',
+                'product-2-title': 'Остатки электронной техники',
+                'product-2-desc': 'Остатки различных электронных изделий, включая аксессуары для телефонов, зарядные устройства, наушники и т.д., новые с оригинальной упаковкой',
+                'product-3-title': 'Остатки домашних товаров',
+                'product-3-desc': 'Кухонные принадлежности, моющие средства, текстиль для дома и другие домашние товары, хорошее качество, низкие цены',
+                'product-4-title': 'Остатки игрушек и подарков',
+                'product-4-desc': 'Различные игрушки, подарки, украшения, подходящие для праздничных промоций и подарочных маркетов',
+                'product-stock': 'Остаток: ',
+                'product-inquiry': 'Запрос',
+                'load-more': 'Загрузить больше',
+                'about-title': 'О нас',
+                'about-subtitle': 'Профессиональный провайдер услуг международного торгового агентства, посвященный соединению китайских производителей с мировыми покупателями',
+                'about-company': 'О компании',
+                'about-intro': 'Мы - профессиональная компания по оказанию услуг международного торгового агентства, специализирующаяся на предоставлении высококачественных услуг по закупкам, сбору информации об остатках товаров, импорте и экспорте агента и транспортных услугах для клиентов в Украине, России и странах СНГ.',
+                'about-experience': 'Благодаря многолетнему опыту в отрасли и профессиональным знаниям, мы установили стабильные отношения сотрудничества со многими китайскими производителями и поставщиками, способны предоставлять клиентам конкурентоспособные цены и качественную продукцию.',
+                'about-quality': 'Качественные продукты',
+                'about-quality-desc': 'Строгий контроль качества',
+                'about-price': 'Конкурентоспособные цены',
+                'about-price-desc': 'Высоко конкурентоспособные цены',
+                'about-delivery': 'Быстрая доставка',
+                'about-delivery-desc': 'Эффективные логистические услуги',
+                'about-service': 'Профессиональное обслуживание',
+                'about-service-desc': 'Мультиязычная поддержка клиентов',
+                'about-contact': 'Связаться с нами',
+                'about-regions': 'Наши районы обслуживания',
+                'region-ukraine': 'Украина',
+                'region-ukraine-desc': 'Киев, Одесса, Харьков и другие крупные города',
+                'region-russia': 'Россия',
+                'region-russia-desc': 'Москва, Санкт-Петербург, Екатеринбург и другие крупные города',
+                'region-cis': 'Страны СНГ',
+                'region-cis-desc': 'Казахстан, Беларусь, Узбекистан и другие страны',
+                'contact-title': 'Связаться с нами',
+                'contact-subtitle': 'Независимо от того, какие вопросы или нужды у вас есть, мы будем рады вам служить',
+                'contact-form-title': 'Отправить запрос',
+                'form-name': 'Имя',
+                'form-company': 'Название компании',
+                'form-email': 'Электронная почта',
+                'form-phone': 'Номер телефона',
+                'form-country': 'Страна/регион',
+                'form-select-country': 'Пожалуйста, выберите страну/регион',
+                'form-ukraine': 'Украина',
+                'form-russia': 'Россия',
+                'form-kazakhstan': 'Казахстан',
+                'form-belarus': 'Беларусь',
+                'form-uzbekistan': 'Узбекистан',
+                'form-other': 'Другое',
+                'form-service': 'Услуга запроса',
+                'form-select-service': 'Пожалуйста, выберите тип услуги',
+                'form-stock': 'Информация об остатках товаров',
+                'form-procurement': 'Агентство по закупкам в Ивую',
+                'form-import-export': 'Импортно-экспортное агентство',
+                'form-shipping': 'Транспортное агентство',
+                'form-other-service': 'Другое',
+                'form-message': 'Содержание запроса',
+                'form-submit': 'Отправить запрос',
+                'contact-info-title': 'Контактная информация',
+                'contact-address': 'Адрес',
+                'contact-phone': 'Телефон',
+                'contact-email': 'Электронная почта',
+                'contact-hours': 'Часы работы',
+                'contact-hours-detail': 'Понедельник-пятница: 9:00 - 18:00',
+                'contact-social': 'Следите за нами',
+                'ai-title': 'AI-помощник по переводу',
+                'ai-desc': 'Используйте нашего AI-помощника по переводу, чтобы легко преодолеть языковые барьеры',
+                'ai-greeting': 'Привет! Я ваш AI-помощник по переводу, могу помочь вам перевести с китайского, английского, русского и украинского языков. Чем я могу вам помочь?',
+                'ai-chinese': 'Китайский',
+                'ai-english': 'Английский',
+                'ai-russian': 'Русский',
+                'ai-ukrainian': 'Украинский',
+                'modal-title': 'Запрос на продукт',
+                'modal-name': 'Имя',
+                'modal-email': 'Электронная почта',
+                'modal-phone': 'Номер телефона',
+                'modal-quantity': 'Количество закупки',
+                'modal-message': 'Сообщение',
+                'modal-submit': 'Отправить запрос',
+                'success-title': 'Отправка успешна',
+                'success-message': 'Ваши данные были успешно отправлены, мы свяжемся с вами как можно скорее!',
+                'success-close': 'Закрыть',
+                'footer-about': 'О нас',
+                'footer-about-desc': 'Профессиональный провайдер услуг международного торгового агентства, посвященный соединению китайских производителей с мировыми покупателями',
+                'footer-services': 'Наши услуги',
+                'footer-stock': 'Сбор информации об остатках товаров',
+                'footer-procurement': 'Агентство по закупкам в Ивую',
+                'footer-import-export': 'Импортно-экспортное агентство',
+                'footer-shipping': 'Транспортное агентство',
+                'footer-quick-links': 'Быстрые ссылки',
+                'footer-home': 'Главная',
+                'footer-services-link': 'Услуги',
+                'footer-products': 'Остатки товаров',
+                'footer-about-link': 'О нас',
+                'footer-contact': 'Связаться с нами',
+                'footer-hours': 'Понедельник-пятница: 9:00 - 18:00',
+                'footer-copyright': '© 2025 Global Trade Agent. Все права защищены.'
+            },
+            uk: {
+                'nav-home': 'Головна',
+                'nav-services': 'Послуги',
+                'nav-products': 'Залишки товарів',
+                'nav-about': 'Про нас',
+                'nav-contact': 'Зв\'язатися з нами',
+                'hero-title': 'Професійні послуги міжнародного торговельного агентства',
+                'hero-subtitle': 'З\'єднуємо китайських виробників з глобальними покупцями, надаючи комплексні торгові рішення',
+                'hero-btn-services': 'Дізнайтеся про наші послуги',
+                'hero-btn-contact': 'Зв\'яжіться з нами зараз',
+                'services-title': 'Наші бізнес-послуги',
+                'services-subtitle': 'Надаємо комплексні послуги міжнародного торговельного агентства для глобалізації вашого бізнесу',
+                'service-1-title': 'Збір інформації про залишки товарів',
+                'service-1-desc': 'Збираємо інформацію про залишки різних товарів, надаючи покупцям якісні та доступні пропозиції',
+                'service-2-title': 'Агенція з закупівель у Івуші',
+                'service-2-desc': 'Професійна агентція з закупівель на ринку Івуші, відбираємо якісних постачальників для вас, гарантуємо якість продукції та терміни поставки',
+                'service-3-title': 'Імпортно-експортна агентція',
+                'service-3-desc': 'Надаємо професійні послуги імпорту та експорту, включаючи підготовку документів, митну очистку, операції з літерами кредитування тощо',
+                'service-4-title': 'Транспортна агентція',
+                'service-4-desc': 'Надаємо послуги міжнародного морського, повітряного та наземного транспорту, обираємо оптимальне логістичне рішення для вас',
+                'service-learn-more': 'Дізнатися більше',
+                'process-title': 'Процес міжнародної торгівлі',
+                'products-title': 'Інформація про залишки товарів',
+                'products-subtitle': 'Ми зібрали велику кількість якісної інформації про залишки товарів, надаючи вам конкурентоспроможні ціни',
+                'filter-all': 'Всі категорії',
+                'filter-clothing': 'Одяг та текстиль',
+                'filter-electronics': 'Електроніка',
+                'filter-home': 'Домашні товари',
+                'filter-toys': 'Іграшки та подарунки',
+                'filter-btn': 'Фільтр',
+                'product-1-title': 'Залишки жіночої моди одягу',
+                'product-1-desc': 'Залишки брендового жіночого одягу, включаючи сукні, пальто, штани та ін., хороша якість, вигідні ціни',
+                'product-2-title': 'Залишки електронної техніки',
+                'product-2-desc': 'Залишки різних електронних товарів, включаючи аксесуари для телефонів, зарядні пристрої, навушники та ін., нові з оригінальним пакуванням',
+                'product-3-title': 'Залишки домашніх товарів',
+                'product-3-desc': 'Кухонні пристрої, миючі засоби, текстиль для дому та інші домашні товари, хороша якість, низькі ціни',
+                'product-4-title': 'Залишки іграшок та подарунків',
+                'product-4-desc': 'Різні іграшки, подарунки, декорації, що підходять для святкових промоцій та подарункових маркетів',
+                'product-stock': 'Залишок: ',
+                'product-inquiry': 'Запит',
+                'load-more': 'Завантажити більше',
+                'about-title': 'Про нас',
+                'about-subtitle': 'Професійний постачальник послуг міжнародного торговельного агентства, присвячений з\'єднанню китайських виробників з глобальними покупцями',
+                'about-company': 'Про компанію',
+                'about-intro': 'Ми - професійна компанія з надання послуг міжнародного торговельного агентства, що спеціалізується на наданні високоякісних послуг з закупівель, збору інформації про залишки товарів, агентства імпорту та експорту та транспортних послуг для клієнтів в Україні, Росії та країнах СНД.',
+                'about-experience': 'Завдяки багаторічному досвіду в галузі та професійним знанням, ми установили стабільні відносини співпраці з багатьма китайськими виробниками та постачальниками, зможемо надати клієнтам конкурентоспроможні ціни та якісну продукцію.',
+                'about-quality': 'Якісні продукти',
+                'about-quality-desc': 'Стиркий контроль якості',
+                'about-price': 'Конкурентоспроможні ціни',
+                'about-price-desc': 'Високо конкурентоспроможні ціни',
+                'about-delivery': 'Швидка доставка',
+                'about-delivery-desc': 'Ефективні логістичні послуги',
+                'about-service': 'Професійне обслуговування',
+                'about-service-desc': 'Багатомовна підтримка клієнтів',
+                'about-contact': 'Зв\'язатися з нами',
+                'about-regions': 'Наші райони обслуговування',
+                'region-ukraine': 'Україна',
+                'region-ukraine-desc': 'Київ, Одеса, Харків та інші великі міста',
+                'region-russia': 'Росія',
+                'region-russia-desc': 'Москва, Санкт-Петербург, Екатеринбург та інші великі міста',
+                'region-cis': 'Країни СНД',
+                'region-cis-desc': 'Казахстан, Білорусь, Узбекистан та інші країни',
+                'contact-title': 'Зв\'язатися з нами',
+                'contact-subtitle': 'Незалежно від того, які питання чи потреби у вас є, ми будемо раді вам служити',
+                'contact-form-title': 'Відправити запит',
+                'form-name': 'Ім\'я',
+                'form-company': 'Назва компанії',
+                'form-email': 'Електронна пошта',
+                'form-phone': 'Номер телефону',
+                'form-country': 'Країна/регіон',
+                'form-select-country': 'Будь ласка, виберіть країну/регіон',
+                'form-ukraine': 'Україна',
+                'form-russia': 'Росія',
+                'form-kazakhstan': 'Казахстан',
+                'form-belarus': 'Білорусь',
+                'form-uzbekistan': 'Узбекистан',
+                'form-other': 'Інше',
+                'form-service': 'Послуга запиту',
+                'form-select-service': 'Будь ласка, виберіть тип послуги',
+                'form-stock': 'Інформація про залишки товарів',
+                'form-procurement': 'Агенція з закупівель у Івуші',
+                'form-import-export': 'Імпортно-експортна агентція',
+                'form-shipping': 'Транспортна агентція',
+                'form-other-service': 'Інше',
+                'form-message': 'Вміст запиту',
+                'form-submit': 'Відправити запит',
+                'contact-info-title': 'Контактна інформація',
+                'contact-address': 'Адреса',
+                'contact-phone': 'Телефон',
+                'contact-email': 'Електронна пошта',
+                'contact-hours': 'Години роботи',
+                'contact-hours-detail': 'Понеділок-п\'ятниця: 9:00 - 18:00',
+                'contact-social': 'Слідкуйте за нами',
+                'ai-title': 'AI-ассистент з перекладу',
+                'ai-desc': 'Використовуйте нашего AI-ассистента з перекладу, щоб легко подолати мовні бар\'єри',
+                'ai-greeting': 'Привіт! Я ваш AI-ассистент з перекладу, можу допомогти вам перекладати з китайського, англійського, російського та українського мов. Як я можу вам допомогти?',
+                'ai-chinese': 'Китайський',
+                'ai-english': 'Англійський',
+                'ai-russian': 'Російський',
+                'ai-ukrainian': 'Український',
+                'modal-title': 'Запит на продукт',
+                'modal-name': 'Ім\'я',
+                'modal-email': 'Електронна пошта',
+                'modal-phone': 'Номер телефону',
+                'modal-quantity': 'Кількість закупівлі',
+                'modal-message': 'Повідомлення',
+                'modal-submit': 'Відправити запит',
+                'success-title': 'Відправка успішна',
+                'success-message': 'Ваші дані були успішно відправлені, ми зв\'яжемося з вами якомога швидше!',
+                'success-close': 'Закрити',
+                'footer-about': 'Про нас',
+                'footer-about-desc': 'Професійний постачальник послуг міжнародного торговельного агентства, присвячений з\'єднанню китайських виробників з глобальними покупцями',
+                'footer-services': 'Наші послуги',
+                'footer-stock': 'Збір інформації про залишки товарів',
+                'footer-procurement': 'Агенція з закупівель у Івуші',
+                'footer-import-export': 'Імпортно-експортна агентція',
+                'footer-shipping': 'Транспортна агентція',
+                'footer-quick-links': 'Швидкі посилання',
+                'footer-home': 'Головна',
+                'footer-services-link': 'Послуги',
+                'footer-products': 'Залишки товарів',
+                'footer-about-link': 'Про нас',
+                'footer-contact': 'Зв\'язатися з нами',
+                'footer-hours': 'Понеділок-п\'ятниця: 9:00 - 18:00',
+                'footer-copyright': '© 2025 Global Trade Agent. Всі права захищені.'
+            }
+        };
+        
+        // 当前语言
+        let currentLang = 'zh';
+        
+        // 更新页面语言
+        function updateLanguage(lang) {
+            currentLang = lang;
+            
+            // 更新所有带有data-lang-key属性的元素
+            document.querySelectorAll('[data-lang-key]').forEach(el => {
+                const key = el.getAttribute('data-lang-key');
+                if (translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            
+            // 更新HTML lang属性
+            document.documentElement.lang = lang;
+            
+            // 更新RTL支持
+            if (lang === 'ar') {
+                document.body.classList.add('rtl');
+            } else {
+                document.body.classList.remove('rtl');
+            }
+            
+            // 更新语言按钮状态
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('text-blue-900', 'font-bold');
+                    btn.classList.remove('text-gray-600');
+                } else {
+                    btn.classList.remove('text-blue-900', 'font-bold');
+                    btn.classList.add('text-gray-600');
+                }
+            });
+            
+            // 更新AI助手问候语
+            updateAIGreeting();
+        }
+        
+        // 更新AI助手问候语
+        function updateAIGreeting() {
+            const chatContainer = document.querySelector('.ai-chat-container');
+            const greetingKey = 'ai-greeting';
+            
+            // 保留第一条消息（问候语）并更新
+            const firstMessage = chatContainer.querySelector('.chat-message');
+            if (firstMessage) {
+                const greetingText = firstMessage.querySelector('p');
+                if (greetingText && translations[currentLang][greetingKey]) {
+                    greetingText.textContent = translations[currentLang][greetingKey];
+                }
+            }
+        }
+        
+        // 语言切换按钮点击事件
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.getAttribute('data-lang');
+                updateLanguage(lang);
+            });
+        });
+        
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // 滚动动画
+        function handleScrollAnimation() {
+            const elements = document.querySelectorAll('.fade-in');
+            
+            elements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                const elementBottom = el.getBoundingClientRect().bottom;
+                const isVisible = elementTop < window.innerHeight - 100 && elementBottom > 0;
+                
+                if (isVisible) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+        
+        // 导航链接点击事件
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                // 移除所有导航链接的活动状态
+                document.querySelectorAll('.nav-link').forEach(item => {
+                    item.classList.remove('active-nav');
+                });
+                
+                // 添加当前链接的活动状态
+                this.classList.add('active-nav');
+                
+                // 如果是移动端，点击后关闭菜单
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // 产品筛选功能
+        document.getElementById('category-filter').addEventListener('change', filterProducts);
+        document.getElementById('product-search').addEventListener('input', filterProducts);
+        document.getElementById('filter-btn').addEventListener('click', filterProducts);
+        
+        function filterProducts() {
+            const categoryFilter = document.getElementById('category-filter').value;
+            const searchQuery = document.getElementById('product-search').value.toLowerCase();
+            const products = document.querySelectorAll('#product-list .product-card');
+            
+            products.forEach(product => {
+                const category = product.getAttribute('data-category');
+                const title = product.querySelector('h3').textContent.toLowerCase();
+                const description = product.querySelector('p').textContent.toLowerCase();
+                
+                const categoryMatch = categoryFilter === 'all' || category === categoryFilter;
+                const searchMatch = searchQuery === '' || 
+                                    title.includes(searchQuery) || 
+                                    description.includes(searchQuery);
+                
+                if (categoryMatch && searchMatch) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+        
+        // 加载更多产品
+        document.getElementById('load-more').addEventListener('click', function() {
+            // 模拟加载更多产品
+            this.innerHTML = '<div class="loader mx-auto"></div>';
+            
+            setTimeout(() => {
+                this.innerHTML = '<span data-lang-key="load-more">加载更多</span>';
+                // 这里可以添加加载更多产品的逻辑
+                alert('已加载全部产品');
+            }, 1500);
+        });
+        
+        // 询价模态框
+        const inquiryModal = document.getElementById('inquiry-modal');
+        const closeModal = document.getElementById('close-modal');
+        const inquiryBtns = document.querySelectorAll('.inquiry-btn');
+        
+        inquiryBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const productId = this.getAttribute('data-product');
+                document.getElementById('inquiry-product').value = productId;
+                inquiryModal.classList.remove('hidden');
+            });
+        });
+        
+        closeModal.addEventListener('click', function() {
+            inquiryModal.classList.add('hidden');
+        });
+        
+        // 点击模态框外部关闭
+        window.addEventListener('click', function(event) {
+            if (event.target === inquiryModal) {
+                inquiryModal.classList.add('hidden');
+            }
+        });
+        
+        // 成功提示模态框
+        const successModal = document.getElementById('success-modal');
+        const closeSuccess = document.getElementById('close-success');
+        
+        closeSuccess.addEventListener('click', function() {
+            successModal.classList.add('hidden');
+        });
+        
+        // 询价表单提交
+        document.getElementById('inquiry-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 模拟表单提交
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<div class="loader mx-auto"></div>';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                // 显示成功提示
+                inquiryModal.classList.add('hidden');
+                successModal.classList.remove('hidden');
+                
+                // 重置表单
+                this.reset();
+            }, 1500);
+        });
+        
+        // 联系表单提交
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 模拟表单提交
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<div class="loader mx-auto"></div>';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                // 显示成功提示
+                successModal.classList.remove('hidden');
+                
+                // 重置表单
+                this.reset();
+            }, 1500);
+        });
+        
+        // AI翻译助手
+        const translateBtn = document.getElementById('translate-btn');
+        const translateInput = document.getElementById('translate-input');
+        const translateFrom = document.getElementById('translate-from');
+        const translateTo = document.getElementById('translate-to');
+        const chatContainer = document.querySelector('.ai-chat-container');
+        
+        translateBtn.addEventListener('click', function() {
+            const text = translateInput.value.trim();
+            
+            if (text === '') return;
+            
+            const fromLang = translateFrom.value;
+            const toLang = translateTo.value;
+            
+            // 添加用户消息
+            addChatMessage(text, 'user', fromLang);
+            
+            // 清空输入框
+            translateInput.value = '';
+            
+            // 模拟翻译过程
+            setTimeout(() => {
+                // 模拟翻译结果
+                let translatedText = '';
+                
+                // 简单的模拟翻译
+                if (toLang === 'en' && fromLang === 'zh') {
+                    translatedText = "This is a simulated translation result from Chinese to English.";
+                } else if (toLang === 'zh' && fromLang === 'en') {
+                    translatedText = "这是一个从英文翻译成中文的模拟结果。";
+                } else if (toLang === 'ru' && fromLang === 'zh') {
+                    translatedText = "Это имитированный результат перевода с китайского на русский.";
+                } else if (toLang === 'uk' && fromLang === 'zh') {
+                    translatedText = "Це імітований результат перекладу з китайської на українську.";
+                } else {
+                    translatedText = "Translation result: " + text;
+                }
+                
+                // 添加AI回复
+                addChatMessage(translatedText, 'ai', toLang);
+                
+                // 滚动到底部
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }, 1000);
+        });
+        
+        // 按Enter键翻译
+        translateInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                translateBtn.click();
+            }
+        });
+        
+        // 添加聊天消息
+        function addChatMessage(text, sender, lang) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('chat-message', 'flex', 'mb-4');
+            
+            if (sender === 'user') {
+                messageDiv.classList.add('justify-end');
+                messageDiv.innerHTML = `
+                    <div class="bg-blue-900 text-white rounded-lg py-2 px-4 max-w-[80%]">
+                        <p>${text}</p>
+                    </div>
+                `;
+            } else {
+                messageDiv.innerHTML = `
+                    <div class="bg-gray-200 text-gray-800 rounded-lg py-2 px-4 max-w-[80%]">
+                        <p>${text}</p>
+                    </div>
+                `;
+            }
+            
+            // 添加到聊天容器
+            chatContainer.appendChild(messageDiv);
+            
+            // 滚动到底部
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+        
+        // 页面加载完成后执行
+        window.addEventListener('load', function() {
+            // 初始化语言
+            updateLanguage('zh');
+            
+            // 初始化滚动动画
+            handleScrollAnimation();
+            
+            // 监听滚动事件
+            window.addEventListener('scroll', handleScrollAnimation);
+        });
+    </script>
+</body>
+</html>
