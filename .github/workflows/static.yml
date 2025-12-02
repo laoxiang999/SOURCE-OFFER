@@ -1,0 +1,22 @@
+name: Deploy GitHub Pages
+
+# 触发条件：推送到 main 分支时自动部署
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 拉取代码
+      - uses: actions/checkout@v4
+
+      # 部署到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          # GitHub 令牌（无需手动配置，自动生成）
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # 部署的文件夹（当前根目录，若文件在 docs 文件夹则改为 docs/）
+          publish_dir: ./
