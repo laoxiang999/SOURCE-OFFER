@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>国际贸易代理 - 全球贸易解决方案</title>
+    <title>申沃进出口 source-offer（国际贸易代理）</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- 引入图标库（可选，用于语言切换图标） -->
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- 导航栏（含语言切换） -->
+    <!-- 导航栏（修复链接为锚点） -->
     <nav>
         <div class="logo">
-            <img src="images/logo.png" alt="公司Logo">
-            <h1>国际贸易代理</h1>
+            <img src="images/logo.png" alt="申沃进出口 Logo">
+            <div class="logo-text">
+                <h1>申沃进出口</h1>
+                <span class="en-logo">source-offer</span>
+                <p class="tagline">国际贸易代理</p>
+            </div>
         </div>
         <div class="nav-links">
-            <a href="index.html" class="active">首页</a>
-            <a href="lang/zh.html#products">产品服务</a>
-            <a href="lang/zh.html#about">关于我们</a>
-            <a href="lang/zh.html#contact">联系我们</a>
+            <a href="#home" class="active">首页</a>
+            <a href="#services">业务服务</a>
+            <a href="#products">库存尾货</a>
+            <a href="#about">关于我们</a>
+            <a href="#contact">联系我们</a>
         </div>
         <!-- 语言切换按钮 -->
         <div class="lang-switch">
@@ -30,34 +34,142 @@
         </div>
     </nav>
 
-    <!-- 首页Banner -->
-    <section class="banner">
+    <!-- 首页Banner（添加id="home"） -->
+    <section id="home" class="banner">
         <img src="images/banner.jpg" alt="国际贸易Banner">
         <div class="banner-text">
             <h2>专业国际贸易解决方案</h2>
             <p>连接中国与全球市场，提供一站式代理服务</p>
-            <a href="lang/zh.html#contact" class="btn">立即咨询</a>
+            <a href="#contact" class="btn">立即咨询</a>
         </div>
     </section>
 
-    <!-- 核心优势 -->
-    <section class="advantages">
-        <h3>核心优势</h3>
-        <div class="advantage-cards">
+    <!-- 业务服务（添加id="services"） -->
+    <section id="services" class="services">
+        <h3>核心业务服务</h3>
+        <div class="service-cards">
             <div class="card">
-                <i class="fa-solid fa-globe"></i>
-                <h4>全球覆盖</h4>
-                <p>深耕俄罗斯、乌克兰及独联体国家市场，渠道稳定</p>
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <h4>库存尾货采购</h4>
+                <p>专业收集库存尾货信息，提供高性价比的清仓产品采购服务，覆盖各类日用百货、电子产品等</p>
             </div>
             <div class="card">
-                <i class="fa-solid fa-handshake"></i>
-                <h4>专业团队</h4>
-                <p>多语言服务团队，提供定制化贸易解决方案</p>
+                <i class="fa-solid fa-shopping-cart"></i>
+                <h4>义乌代理采购</h4>
+                <p>依托义乌小商品市场优势，提供一站式代理采购、验货、打包服务，降低采购成本</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-globe"></i>
+                <h4>进出口代理</h4>
+                <p>专业办理报关、报检、退税等进出口手续，解决国际贸易中的合规问题</p>
             </div>
             <div class="card">
                 <i class="fa-solid fa-truck-fast"></i>
-                <h4>高效物流</h4>
-                <p>整合国际物流资源，确保货物安全准时送达</p>
+                <h4>货运代理</h4>
+                <p>提供海运、空运、陆运等多式联运服务，覆盖俄罗斯、乌克兰及独联体国家专线物流</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 库存尾货（添加id="products"） -->
+    <section id="products" class="products">
+        <h3>库存尾货展示</h3>
+        <p class="products-desc">我们收集各类优质库存尾货资源，以下为部分产品类别，欢迎咨询具体产品信息</p>
+        <div class="products-grid">
+            <div class="product-item">
+                <img src="images/product1.jpg" alt="日用百货">
+                <h5>日用百货</h5>
+                <p>各类家居用品、厨房用具、清洁用品等</p>
+            </div>
+            <div class="product-item">
+                <img src="images/product2.jpg" alt="电子产品">
+                <h5>电子产品</h5>
+                <p>手机配件、小型家电、数码产品等</p>
+            </div>
+            <div class="product-item">
+                <img src="images/product3.jpg" alt="服装鞋帽">
+                <h5>服装鞋帽</h5>
+                <p>男女装、童装、鞋靴、箱包等库存清仓</p>
+            </div>
+            <div class="product-item">
+                <img src="images/product4.jpg" alt="玩具礼品">
+                <h5>玩具礼品</h5>
+                <p>各类玩具、节日礼品、工艺品等</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们（添加id="about"） -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h3>关于我们</h3>
+                <p>申沃进出口（source-offer）是一家专业的国际贸易代理公司，专注于为俄罗斯、乌克兰及独联体国家客户提供一站式贸易解决方案。</p>
+                <p>我们依托中国丰富的供应链资源和义乌小商品市场优势，致力于为客户提供高性价比的产品采购、进出口代理、物流配送等全方位服务。</p>
+                <p>公司拥有专业的多语言服务团队，熟悉国际贸易规则和目标市场需求，能够为客户解决贸易过程中的各类问题，降低贸易风险和成本。</p>
+                <div class="about-advantages">
+                    <div class="advantage-item">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>10年以上行业经验</span>
+                    </div>
+                    <div class="advantage-item">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>多语言专业服务团队</span>
+                    </div>
+                    <div class="advantage-item">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>覆盖独联体国家专线物流</span>
+                    </div>
+                    <div class="advantage-item">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>全程透明化服务流程</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="images/about.jpg" alt="公司实景">
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们（添加id="contact"） -->
+    <section id="contact" class="contact">
+        <h3>联系我们</h3>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h4>联系方式</h4>
+                <ul>
+                    <li><i class="fa-solid fa-phone"></i> 电话/微信/WhatsApp/Telegram/VK：+8615258955759</li>
+                    <li><i class="fa-solid fa-envelope"></i> 邮箱：317848118@qq.com</li>
+                    <li><i class="fa-brands fa-instagram"></i> Instagram：yiwu7758</li>
+                    <li><i class="fa-solid fa-location-dot"></i> 地址：中国浙江省义乌市国际贸易城</li>
+                </ul>
+                <div class="contact-qrcode">
+                    <img src="images/wechat.jpg" alt="微信二维码">
+                    <p>微信扫码联系</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h4>在线咨询</h4>
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" name="name" required placeholder="请输入您的姓名">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱</label>
+                        <input type="email" id="email" name="email" required placeholder="请输入您的邮箱">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">电话</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="请输入您的电话">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">咨询内容</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="请输入您的咨询内容"></textarea>
+                    </div>
+                    <button type="submit" class="btn submit-btn">提交咨询</button>
+                </form>
             </div>
         </div>
     </section>
@@ -65,8 +177,35 @@
     <!-- 底部 -->
     <footer>
         <div class="footer-content">
-            <p>© 2025 国际贸易代理有限公司 版权所有</p>
-            <p>邮箱：contact@yourdomain.com | 电话：+86-123-4567-8910</p>
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="申沃进出口 Logo">
+                <div class="logo-text">
+                    <h3>申沃进出口 source-offer</h3>
+                    <p>国际贸易代理专家</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#services">业务服务</a></li>
+                    <li><a href="#products">库存尾货</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>联系我们</h4>
+                <ul>
+                    <li><i class="fa-solid fa-phone"></i> +8615258955759</li>
+                    <li><i class="fa-solid fa-envelope"></i> 317848118@qq.com</li>
+                    <li><i class="fa-brands fa-instagram"></i> yiwu7758</li>
+                    <li><i class="fa-solid fa-location-dot"></i> 中国浙江省义乌市国际贸易城</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 申沃进出口 source-offer（国际贸易代理） 版权所有</p>
         </div>
     </footer>
 
