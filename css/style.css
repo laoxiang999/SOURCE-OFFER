@@ -113,6 +113,36 @@ nav {
     color: #fff;
 }
 
+/* 顶部联系方式 */
+.top-contact {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 1rem 5%;
+    border-bottom: 1px solid #34495e;
+}
+
+.top-contact-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
+.contact-item i {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
 /* Banner */
 .banner {
     position: relative;
@@ -687,5 +717,16 @@ footer {
 
     .btn {
         padding: 0.7rem 1.5rem;
+    }
+
+    /* 顶部联系方式响应式 */
+    .top-contact-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .contact-item {
+        font-size: 0.9rem;
     }
 }
