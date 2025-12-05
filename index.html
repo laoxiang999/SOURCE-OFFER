@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>申沃进出口 - 国际贸易代理 | 义乌采购 | 库存尾货</title>
+    <!-- 外部 CDN 资源（稳定且支持跨域） -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 本地 CSS 样式 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 网站图标（可选，需自行替换图片） -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body class="bg-gray-50">
+    <!-- 顶部语言选择栏 -->
+    <div class="bg-gray-100 py-2">
+        <div class="container mx-auto px-4 flex justify-end items-center">
+            <div class="flex space-x-4">
+                <button class="lang-btn text-sm font-medium hover:text-blue-800 transition-colors" data-lang="zh">中文</button>
+                <button class="lang-btn text-sm font-medium hover:text-blue-800 transition-colors" data-lang="en">English</button>
+                <button class="lang-btn text-sm font-medium hover:text-blue-800 transition-colors" data-lang="ru">Русский</button>
+                <button class="lang-btn text-sm font-medium hover:text-blue-800 transition-colors" data-lang="uk">Українська</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div>
+                    <div class="flex items-center">
+                        <a href="#" class="text-2xl font-bold text-blue-900">
+                            <span class="text-yellow-600">申沃</span>进出口 <span class="text-white bg-blue-900 px-1 rounded">source-offer</span>
+                        </a>
+                    </div>
+                    
+                    <!-- 页头联系方式 - 放在LOGO下方 -->
+                    <div class="flex items-center space-x-4 mt-1 text-blue-900 font-medium">
+                        <a href="https://wa.me/8615258955759" target="_blank" class="flex items-center hover:text-green-600 transition-colors">
+                            <i class="fab fa-whatsapp mr-1"></i> WhatsApp
+                        </a>
+                        <span class="text-gray-300">|</span>
+                        <a href="https://t.me/+8615258955759" target="_blank" class="flex items-center hover:text-blue-700 transition-colors">
+                            <i class="fab fa-telegram mr-1"></i> Telegram
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 桌面导航 -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="nav-link active-nav text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-home">首页</a>
+                    <a href="#services" class="nav-link text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-services">业务服务</a>
+                    <a href="#products" class="nav-link text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-products">库存尾货</a>
+                    <a href="#about" class="nav-link text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-about">关于我们</a>
+                    <a href="#contact" class="nav-link text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-contact">联系我们</a>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-800 hover:text-blue-900 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 移动端导航菜单 -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <a href="#home" class="block py-2 text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-home">首页</a>
+                <a href="#services" class="block py-2 text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-services">业务服务</a>
+                <a href="#products" class="block py-2 text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-products">库存尾货</a>
+                <a href="#about" class="block py-2 text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-about">关于我们</a>
+                <a href="#contact" class="block py-2 text-gray-800 hover:text-blue-900 font-medium" data-lang-key="nav-contact">联系我们</a>
+                
+                <!-- 移动端页头联系方式 -->
+                <div class="border-t border-gray-200 mt-2 pt-2 space-y-2">
+                    <a href="https://wa.me/8615258955759" target="_blank" class="flex items-center py-2 text-green-600 hover:text-green-700 transition-colors">
+                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp: +8615258955759
+                    </a>
+                    <a href="https://t.me/+8615258955759" target="_blank" class="flex items-center py-2 text-blue-900 hover:text-blue-700 transition-colors">
+                        <i class="fab fa-telegram mr-2"></i> Telegram: @source_offer
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section id="home" class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 fade-in" data-lang-key="hero-title">
+                    专业国际贸易代理服务
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90 fade-in" data-lang-key="hero-subtitle">
+                    连接中国制造商与全球采购商，提供一站式贸易解决方案
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-4 fade-in">
+                    <a href="#services" class="btn-primary px-8 py-3 rounded-lg font-medium text-lg">
+                        <span data-lang-key="hero-btn-services">了解我们的服务</span>
+                    </a>
+                    <a href="#contact" class="btn-secondary px-8 py-3 rounded-lg font-medium text-lg">
+                        <span data-lang-key="hero-btn-contact">立即咨询</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 业务服务 -->
+    <section id="services" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 fade-in" data-lang-key="services-title">我们的业务服务</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in" data-lang-key="services-subtitle">
+                    提供全方位的国际贸易代理服务，助力您的业务全球化
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 服务卡片 1 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 fade-in">
+                    <div class="service-icon text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" data-lang-key="service-1-title">库存尾货信息收集</h3>
+                    <p class="text-gray-600 mb-4" data-lang-key="service-1-desc">
+                        收集各类商品库存尾货信息，为采购商提供质优价廉的货源选择
+                    </p>
+                    <a href="#products" class="text-blue-900 hover:text-blue-700 font-medium flex items-center" data-lang-key="service-learn-more">
+                        了解更多 <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- 服务卡片 2 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 fade-in">
+                    <div class="service-icon text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" data-lang-key="service-2-title">义乌代理采购</h3>
+                    <p class="text-gray-600 mb-4" data-lang-key="service-2-desc">
+                        专业义乌市场采购代理，为您筛选优质供应商，确保商品质量与交期
+                    </p>
+                    <a href="#contact" class="text-blue-900 hover:text-blue-700 font-medium flex items-center" data-lang-key="service-learn-more">
+                        了解更多 <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- 服务卡片 3 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 fade-in">
+                    <div class="service-icon text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" data-lang-key="service-3-title">进出口代理</h3>
+                    <p class="text-gray-600 mb-4" data-lang-key="service-3-desc">
+                        提供专业的进出口代理服务，包括单证制作、报关报检、信用证操作等
+                    </p>
+                    <a href="#contact" class="text-blue-900 hover:text-blue-700 font-medium flex items-center" data-lang-key="service-learn-more">
+                        了解更多 <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- 服务卡片 4 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 fade-in">
+                    <div class="service-icon text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" data-lang-key="service-4-title">货运代理</h3>
+                    <p class="text-gray-600 mb-4" data-lang-key="service-4-desc">
+                        提供国际海运、空运、陆运代理服务，为您选择最优物流方案
+                    </p>
+                    <a href="#contact" class="text-blue-900 hover:text-blue-700 font-medium flex items-center" data-lang-key="service-learn-more">
+                        了解更多 <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 库存尾货信息 -->
+    <section id="products" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 fade-in" data-lang-key="products-title">库存尾货信息</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in" data-lang-key="products-subtitle">
+                    我们收集了大量优质库存尾货信息，为您提供极具竞争力的价格
+                </p>
+            </div>
+            
+            <!-- 搜索和筛选 -->
+            <div class="mb-10 fade-in">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <div class="flex-grow">
+                        <div class="relative">
+                            <input type="text" id="product-search" placeholder="搜索产品..." 
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                            <button class="absolute right-3 top-3 text-gray-500 hover:text-blue-900">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <select id="category-filter" class="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                            <option value="all" data-lang-key="filter-all">所有类别</option>
+                            <option value="clothing" data-lang-key="filter-clothing">服装纺织</option>
+                            <option value="electronics" data-lang-key="filter-electronics">电子产品</option>
+                            <option value="home" data-lang-key="filter-home">家居用品</option>
+                            <option value="toys" data-lang-key="filter-toys">玩具礼品</option>
+                        </select>
+                        <button id="filter-btn" class="btn-primary px-4 py-3 rounded-lg">
+                            <i class="fas fa-filter mr-2"></i> <span data-lang-key="filter-btn">筛选</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 产品列表 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="product-list">
+                <!-- 产品卡片 1 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden fade-in" data-category="clothing">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="images/product1.jpg" 
+                             alt="女士服装尾货" 
+                             class="product-image w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded">
+                            热销
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2" data-lang-key="product-1-title">女士时尚服装尾货</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang-key="product-1-desc">
+                            品牌女士服装尾货，包括连衣裙、外套、裤子等，质量优良，价格优惠
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-900 font-bold">¥15-35 / 件</span>
+                            <span class="text-gray-500 text-sm" data-lang-key="product-stock">库存: 5000件</span>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 bg-gray-50 border-t border-gray-100">
+                        <button class="inquiry-btn w-full py-2 bg-blue-900 text-white rounded hover:bg-blue-800 transition-colors" data-product="product-1">
+                            <span data-lang-key="product-inquiry">询价</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 产品卡片 2 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden fade-in" data-category="electronics">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="images/product2.jpg" 
+                             alt="电子产品库存" 
+                             class="product-image w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2" data-lang-key="product-2-title">电子产品库存尾货</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang-key="product-2-desc">
+                            各类电子产品库存，包括手机配件、充电器、耳机等，全新原包装
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-900 font-bold">¥5-25 / 件</span>
+                            <span class="text-gray-500 text-sm" data-lang-key="product-stock">库存: 10000件</span>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 bg-gray-50 border-t border-gray-100">
+                        <button class="inquiry-btn w-full py-2 bg-blue-900 text-white rounded hover:bg-blue-800 transition-colors" data-product="product-2">
+                            <span data-lang-key="product-inquiry">询价</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 产品卡片 3 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden fade-in" data-category="home">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="images/product3.jpg" 
+                             alt="家居用品尾货" 
+                             class="product-image w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                            特价
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2" data-lang-key="product-3-title">家居用品尾货</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang-key="product-3-desc">
+                            厨房用品、清洁用品、家纺等家居产品尾货，质量好，价格低
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-900 font-bold">¥3-15 / 件</span>
+                            <span class="text-gray-500 text-sm" data-lang-key="product-stock">库存: 8000件</span>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 bg-gray-50 border-t border-gray-100">
+                        <button class="inquiry-btn w-full py-2 bg-blue-900 text-white rounded hover:bg-blue-800 transition-colors" data-product="product-3">
+                            <span data-lang-key="product-inquiry">询价</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 产品卡片 4 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden fade-in" data-category="toys">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="images/product4.jpg" 
+                             alt="玩具礼品尾货" 
+                             class="product-image w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2" data-lang-key="product-4-title">玩具礼品尾货</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang-key="product-4-desc">
+                            各类玩具、礼品、装饰品尾货，适合节日促销和礼品市场
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-900 font-bold">¥2-10 / 件</span>
+                            <span class="text-gray-500 text-sm" data-lang-key="product-stock">库存: 12000件</span>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 bg-gray-50 border-t border-gray-100">
+                        <button class="inquiry-btn w-full py-2 bg-blue-900 text-white rounded hover:bg-blue-800 transition-colors" data-product="product-4">
+                            <span data-lang-key="product-inquiry">询价</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 加载更多按钮 -->
+            <div class="text-center mt-12">
+                <button id="load-more" class="btn-primary px-8 py-3 rounded-lg font-medium">
+                    <span data-lang-key="load-more">加载更多</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 fade-in" data-lang-key="about-title">关于我们</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in" data-lang-key="about-subtitle">
+                    专业的国际贸易代理服务提供商，致力于连接中国制造商与全球采购商
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <img src="images/about-image.jpg" 
+                         alt="义乌小商品市场" 
+                         class="rounded-lg shadow-xl w-full">
+                </div>
+                
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4" data-lang-key="about-company">公司简介</h3>
+                    <p class="text-gray-700 mb-6" data-lang-key="about-intro">
+                        我们是一家专业的国际贸易代理服务公司，专注于为乌克兰、俄罗斯及独联体国家的客户提供高质量的采购代理、库存尾货信息收集、进出口代理和货运代理服务。
+                    </p>
+                    <p class="text-gray-700 mb-6" data-lang-key="about-experience">
+                        凭借多年的行业经验和专业知识，我们已与众多中国制造商和供应商建立了稳定的合作关系，能够为客户提供具有竞争力的价格和优质的产品。
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <div class="text-blue-900 text-3xl mr-4">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900" data-lang-key="about-quality">优质产品</h4>
+                                <p class="text-gray-600 text-sm" data-lang-key="about-quality-desc">严格质量控制</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="text-blue-900 text-3xl mr-4">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900" data-lang-key="about-price">优惠价格</h4>
+                                <p class="text-gray-600 text-sm" data-lang-key="about-price-desc">极具竞争力的价格</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="text-blue-900 text-3xl mr-4">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900" data-lang-key="about-delivery">快捷交付</h4>
+                                <p class="text-gray-600 text-sm" data-lang-key="about-delivery-desc">高效物流服务</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="text-blue-900 text-3xl mr-4">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900" data-lang-key="about-service">专业服务</h4>
+                                <p class="text-gray-600 text-sm" data-lang-key="about-service-desc">多语言客户支持</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn-primary inline-block px-6 py-3 rounded-lg font-medium">
+                        <span data-lang-key="about-contact">联系我们</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 服务区域 -->
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center fade-in" data-lang-key="about-regions">我们的服务区域</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 fade-in">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <div class="text-blue-900 text-4xl mb-4">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="region-ukraine">乌克兰</h4>
+                        <p class="text-gray-600" data-lang-key="region-ukraine-desc">
+                            基辅、敖德萨、哈尔科夫等主要城市
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <div class="text-blue-900 text-4xl mb-4">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="region-russia">俄罗斯</h4>
+                        <p class="text-gray-600" data-lang-key="region-russia-desc">
+                            莫斯科、圣彼得堡、叶卡捷琳堡等主要城市
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <div class="text-blue-900 text-4xl mb-4">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="region-cis">独联体国家</h4>
+                        <p class="text-gray-600" data-lang-key="region-cis-desc">
+                            哈萨克斯坦、白俄罗斯、乌兹别克斯坦等国家
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 fade-in" data-lang-key="contact-title">联系我们</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in" data-lang-key="contact-subtitle">
+                    无论您有任何问题或需求，我们都将竭诚为您服务
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-12">
+                <!-- 联系信息 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 fade-in">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6" data-lang-key="contact-info-title">联系方式</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-blue-900 text-2xl mt-1 mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1" data-lang-key="contact-address">地址</h4>
+                                <p class="text-gray-600" data-lang-key="contact-address-desc">浙江省义乌市国际商贸城一区</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-blue-900 text-2xl mt-1 mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1" data-lang-key="contact-phone">电话/微信</h4>
+                                <p class="text-gray-600">+86 15258955759</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-blue-900 text-2xl mt-1 mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1" data-lang-key="contact-email">邮箱</h4>
+                                <p class="text-gray-600">317848118@qq.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-blue-900 text-2xl mt-1 mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1" data-lang-key="contact-time">工作时间</h4>
+                                <p class="text-gray-600" data-lang-key="contact-time-desc">周一至周日 8:00 - 20:00</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 社交平台账号 -->
+                        <div class="flex items-start">
+                            <div class="text-blue-900 text-2xl mt-1 mr-4">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">社交平台</h4>
+                                <div class="space-y-2">
+                                    <p class="text-gray-600 flex items-center">
+                                        <i class="fab fa-weixin text-green-500 mr-2"></i> 微信: +86 15258955759
+                                    </p>
+                                    <p class="text-gray-600 flex items-center">
+                                        <i class="fab fa-whatsapp text-green-600 mr-2"></i> WhatsApp: +8615258955759
+                                    </p>
+                                    <p class="text-gray-600 flex items-center">
+                                        <i class="fab fa-telegram text-blue-500 mr-2"></i> Telegram: @source_offer
+                                    </p>
+                                    <p class="text-gray-600 flex items-center">
+                                        <i class="fab fa-vk text-blue-600 mr-2"></i> VK: +8615258955759
+                                    </p>
+                                    <p class="text-gray-600 flex items-center">
+                                        <i class="fab fa-instagram text-pink-500 mr-2"></i> Instagram: @source_offer
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 多语言客服 -->
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6" data-lang-key="contact-service-title">多语言客服</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+                                <div class="text-blue-900 text-2xl mr-4">
+                                    <i class="fas fa-language"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">中文/英语</h4>
+                                    <p class="text-gray-600 text-sm">随时在线</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+                                <div class="text-blue-900 text-2xl mr-4">
+                                    <i class="fas fa-language"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">俄语/乌克兰语</h4>
+                                    <p class="text-gray-600 text-sm">随时在线</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">申沃进出口</h3>
+                    <p class="text-gray-300 mb-4">专业的国际贸易代理服务提供商，连接中国与全球市场</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-weixin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-telegram text-xl"></i>
+                        </a>
+                        <a href="https://wa.me/8615258955759" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-vk text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4" data-lang-key="footer-services">服务项目</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors" data-lang-key="footer-service-1">库存尾货信息收集</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors" data-lang-key="footer-service-2">义乌代理采购</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors" data-lang-key="footer-service-3">进出口代理</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors" data-lang-key="footer-service-4">货运代理</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4" data-lang-key="footer-links">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors" data-lang-key="footer-link-1">首页</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors" data-lang-key="footer-link-2">关于我们</a></li>
+                        <li><a href="#products" class="text-gray-300 hover:text-white transition-colors" data-lang-key="footer-link-3">库存尾货</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors" data-lang-key="footer-link-4">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4" data-lang-key="footer-contact">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>浙江省义乌市国际商贸城一区</span>
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-phone mr-2"></i>
+                            <span>+86 15258955759</span>
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>317848118@qq.com</span>
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            <span>+8615258955759</span>
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fab fa-vk mr-2"></i>
+                            <span>+8615258955759</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2025 申沃进出口 source-offer 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 本地 JS 脚本 -->
+    <script src="js/script.js"></script>
+</body>
+</html>
